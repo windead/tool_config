@@ -5,3 +5,9 @@
 	br = branch
 	ci = commit
 	st = status
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit 
+    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- 
+[push]
+	default = simple
+[credential]
+	helper = store
