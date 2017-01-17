@@ -1,18 +1,19 @@
+[push]
+	default = simple
+[credential]
+	helper = store
 [merge]
 	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
 [alias]
+    aa = add -A
 	co = checkout
 	br = branch
 	ci = commit
 	st = status
     l = log --pretty=oneline -n 20 --graph --abbrev-commit 
-    ll = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- 
+    ll = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --show-signature --
 	d = difftool
-[push]
-	default = simple
-[credential]
-	helper = store
-[diff]
-	tool = vimdiff
-[difftool]
-	prompt = false
